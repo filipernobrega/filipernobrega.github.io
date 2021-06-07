@@ -8,7 +8,30 @@
 
 <main>
   {% include banner.html %}
-  {{ content }}
+  <div class="base-content">
+    <h1 class="base-title">
+      {{ page.title }}
+    </h1>    
+    {{ content }}
+  </div>
+
+  <div class="base-content__dark">
+    <div class="card-row">
+      {% for post in site.posts %}     
+        <a class="card" href="{{ post.url }}">
+          <div class="card__title">
+            {{ post.title }}
+          </div>
+          <p>
+            <time datetime="{{ post.date }}"> {{ post.date | date_to_string }} </h1>
+          </p>
+          <p>
+            by {{ post.autor }}
+          </p> 
+        </a>
+      {% endfor %}
+    </div>
+  </div>
 </main>
 
 {% include footer.html %}
