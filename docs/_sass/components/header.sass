@@ -1,0 +1,29 @@
+@import "../_variables"
+@import "../_mixins"
+
+header
+  background: $bg-color
+  padding: 20px 10%
+
+.menu 
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  @include container
+
+  &__logo 
+    color: $text-color
+    font-weight: bold
+    font-size: 20px
+    margin-right: auto
+
+  &__item 
+    display: inline-block
+    padding: 0 20px
+
+    a
+      color: $text-color
+      transition:  all 1s ease 0s
+
+      &:hover 
+        color: $primary-color

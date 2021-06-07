@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "My First Post"
-date:   2021-06-01 11:44:00 -0300
 categories: Articules
 ---
 ### History 
