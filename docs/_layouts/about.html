@@ -1,8 +1,7 @@
 ---
 ---
-<head>
-  <link rel="stylesheet" type="text/css" href="{{ site.baseusrl }}/assets/css/main.css">
-</head>
+
+{% include head.html %}
 
 {% include header.html %}
 
@@ -31,13 +30,26 @@
       <h1 class="base-title">
         Colaboradores
       </h1>
-      <ul>
+      <div class="collaborators">
         {% for collaborator in site.data.about.collaborators %}  
-          <li>
-            {{ collaborator.name }}
-          </li>
+           <div class="collaborators__card">
+             <img src="{{ site.url }}/assets/images/collaborators/{{ collaborator.picture_url }}" alt="{{ collaborator.name }}">
+              <div class="collaborators__card--name">
+                {{ collaborator.name }}
+              </div>
+              <div class="collaborators__card--role">
+                {{ collaborator.role}}
+              </div>
+              <a href="https://twitter.com/{{ collaborator.twitter }}">                
+                <i class="fab fa-twitter"></i> {{ collaborator.twitter }}
+              </a>
+              <a href="https://github.com/{{ collaborator.twitter }}">
+                <i class="fab fa-github"></i> {{ collaborator.twitter }}
+              </a>
+           </div>
         {% endfor %}
-      </ul>
+      </div>
+      
     </div>
 
     <div id="partners" class="base-content__dark">

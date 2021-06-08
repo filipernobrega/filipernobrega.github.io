@@ -1,0 +1,39 @@
+@import "../_variables"
+@import "../_mixins"
+
+.collaborators 
+  @include display-row
+  justify-content: space-between
+  
+  &__card
+    max-width: 200px
+    text-align: center
+    line-height: 20px
+    @include display-col
+    
+
+    & img 
+      border-radius: 100%
+      max-width: 150px
+    
+    &--name 
+      font-size: 20px
+      margin-top: 20px
+      font-weight: bold
+      color: $primary-color
+
+    &--role 
+      font-size: 16px
+      font-weight: lighter
+
+    & a
+      font-size: 12px
+      color: black
+      margin-top: 2px
+
+      &:hover
+        color: $primary-color
+
+    
+
+    

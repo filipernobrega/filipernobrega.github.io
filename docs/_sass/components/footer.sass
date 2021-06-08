@@ -37,7 +37,13 @@ footer
         color: $primary-color
 
   &__social 
+    @include display-row
+    justify-content: space-around
 
-    & img
-      max-width: 40px
+    & a 
+      color: $text-color
+      font-size: 40px
       margin: 0 10px
+
+      &:hover
+        color: $primary-color
