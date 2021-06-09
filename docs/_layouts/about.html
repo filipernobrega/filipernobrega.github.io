@@ -33,7 +33,7 @@
       <div class="collaborators">
         {% for collaborator in site.data.about.collaborators %}  
            <div class="collaborators__card">
-             <img src="{{ site.url }}/assets/images/collaborators/{{ collaborator.picture_url }}" alt="{{ collaborator.name }}">
+             <img src="{{ site.url }}/assets/images/collaborators/{{ collaborator.avatar }}" alt="{{ collaborator.name }}">
               <div class="collaborators__card--name">
                 {{ collaborator.name }}
               </div>
@@ -52,18 +52,20 @@
       
     </div>
 
-    <div id="partners" class="base-content__dark">
+    <div id="partners">
       <div class="base-container">
         <h1 class="base-title">
           Parceiros
         </h1>
-        <ul>
-          {% for partner in site.data.about.partners %}  
-            <li>
-              {{ partner.name }}
-            </li>
+        <div class="partners">
+          {% for partner in site.data.about.partners %} 
+          <div class="partners__container">
+            <a href="{{ partner.url }}" target="_blank">
+              <img src="{{ site.url }}/assets/images/partners/{{ partner.logo }}" alt="{{ partner.name }}">
+            </a>
+          </div>
           {% endfor %}
-        </ul>
+          </div>
       </div>
     </div>
 

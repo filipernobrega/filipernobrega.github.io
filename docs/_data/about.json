@@ -13,45 +13,45 @@
       "twitter": "FabioRNobrega",
       "github": "FabioRNobrega",
       "role":"Software Developer",
-      "picture_url": "fabio-nobrega.jpeg"
+      "avatar": "fabio-nobrega.jpeg"
     },
     {
       "name": "Fábio R. Nóbrega",
       "twitter": "FabioRNobrega",
       "github": "FabioRNobrega",
       "role":"Software Developer",
-      "picture_url": "fabio-nobrega.jpeg"
+      "avatar": "fabio-nobrega.jpeg"
     },
     {
       "name": "Fábio R. Nóbrega",
       "twitter": "FabioRNobrega",
       "github": "FabioRNobrega",
       "role":"Software Developer",
-      "picture_url": "fabio-nobrega.jpeg"
+      "avatar": "fabio-nobrega.jpeg"
     },
     {
       "name": "Fábio R. Nóbrega",
       "twitter": "FabioRNobrega",
       "github": "FabioRNobrega",
       "role":"Software Developer",
-      "picture_url": "fabio-nobrega.jpeg"
+      "avatar": "fabio-nobrega.jpeg"
     }
   ],
   "partners": [
     {
-      "name": "NCE",
-      "url": "nce.com.br",
-      "picture_url": ""
+      "name": "UFRJ",
+      "url": "https://ufrj.br",
+      "logo": "ufrj-logo.png"
     },
     {
       "name": "NCE",
-      "url": "nce.com.br",
-      "picture_url": ""
+      "url": "http://portal.nce.ufrj.br",
+      "logo": "nce-logo.png"
     },
     {
-      "name": "NCE",
-      "url": "nce.com.br",
-      "picture_url": ""
+      "name": "DCC",
+      "url": "https://www.dcc.ufrj.br",
+      "logo": "dcc-logo.png"
     }
   ]
 }
