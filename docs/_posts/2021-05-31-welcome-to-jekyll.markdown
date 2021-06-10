@@ -14,14 +14,38 @@ Jekyll requires blog post files to be named according to the following format:
 Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 Jekyll also offers powerful support for code snippets:
+### Ruby 
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
+
+#### CSS 
+
+{% highlight css linenos %}
+code {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid #C1C1C1;
+    border-radius: 3px;
+    padding: 2px;
+}
+{% endhighlight %}
+
+#### Javascript 
+
+{% highlight javascript linenos %}
+const map = new Map([
+  [ 1, 'one' ],
+  [ 2, 'two' ],
+  [ 3, 'three' ], // trailing comma is ignored
+]);
+{% endhighlight %}
+
+
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 

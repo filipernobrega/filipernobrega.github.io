@@ -29,7 +29,11 @@ github_username:  FabioRNobrega
 
 # Build settings
 port: 3000
+markdown: kramdown
+highlighter: rouge # Supported Languages https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
+
 livereload: true
+
 theme: minima
 plugins:
   - jekyll-feed
