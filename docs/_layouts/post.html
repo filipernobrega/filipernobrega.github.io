@@ -12,19 +12,35 @@
     </h1>
     
     {{ content }}
+
+
+
+    <section class="post__share">
+      <div class="post__share--title">
+        <h4> Compartilhe: </h4>
+      </div>
+      <div class="post__share--links">
+        <a href="https://twitter.com/share?url={{ site.url}}{{ page.url }}&text=Acabei de ler o post {{ page.title}}" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      
+        <a href="https://reddit.com/submit?url={{ site.url}}{{ page.url }}&title=Acabei de ler o post {{ page.title}}" target="_blank">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </div>
+    </section>
   </article>
   
   
   <aside class="post__list">
-    <ul>
-      {% for post in site.posts %}  
-        <li> 
-          <a href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-       </li>
-      {% endfor %}
-    </ul>
+    <h4> Leia também: </h4>
+    {% for post in site.posts %}  
+      <div class="post__list--button">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </div>
+    {% endfor %}
   </aside>
 </main>
 
