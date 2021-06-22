@@ -1,7 +1,5 @@
 ---
-layout: page
+layout: posts-list
 title: Artigos
 permalink: /posts/
 ---
-
-Meus Posts

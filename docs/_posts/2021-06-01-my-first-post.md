@@ -2,6 +2,8 @@
 layout: post
 title:  "My First Post Que é muito legal e tem um titulo grandão"
 categories: Articules
+tags: 'articules'
+description: "This post is about tags"
 ---
 ### History 
 
