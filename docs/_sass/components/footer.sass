@@ -13,16 +13,23 @@ footer
   @include container
   padding: 30px 0
   justify-content: space-between
+  @include tablets-and-down
+    justify-content: space-around
+
 
   &__text
     max-width: 300px
     font-size: 14px
     line-height: 20px
+    @include tablets-and-down
+      display: none
 
     & p 
       margin-bottom: 10px
 
   &__list 
+    @include tablets-and-down
+      display: none
 
     & h4
       margin-bottom: 10px
@@ -44,6 +51,9 @@ footer
       color: $text-color
       font-size: 40px
       margin: 0 10px
+      @include tablets-and-down
+        margin: 0 20px
 
       &:hover
         color: $primary-color
+      
