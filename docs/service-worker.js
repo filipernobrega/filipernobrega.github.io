@@ -1,40 +1,61 @@
-// service-worker.js
+const CACHE = "pwabuilder-offline";
 
-// set names for both precache & runtime cache
-workbox.core.setCacheNameDetails({
-  prefix: 'farnoThoughts',
-  suffix: 'v1.0',
-  precache: 'precache',
-  runtime: 'runtime-cache'
+const offlineFallbackPage = "index.html";
+
+// Install stage sets up the index page (home page) in the cache and opens a new cache
+self.addEventListener("install", function (event) {
+  console.log("Install Event processing");
+
+  event.waitUntil(
+    caches.open(CACHE).then(function (cache) {
+      console.log("Cached offline page during install");
+
+      if (offlineFallbackPage === "ToDo-replace-this-name.html") {
+        return cache.add(new Response("Update the value of the offlineFallbackPage constant in the serviceworker."));
+      }
+      return cache.add(offlineFallbackPage);
+    })
+  );
 });
 
-// let Service Worker take control of pages ASAP
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
+// If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener("fetch", function (event) {
+  if (event.request.method !== "GET") return;
 
-// let Workbox handle our precache list
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
+  event.respondWith(
+    fetch(event.request)
+      .then(function (response) {
+        console.log("Add page to offline cache: " + response.url);
 
-// use `NetworkFirst` strategy for html
-workbox.routing.registerRoute(
-  /\.html$/,
-  new workbox.strategies.NetworkFirst()
-);
+        // If request was success, add or update it in the cache
+        event.waitUntil(updateCache(event.request, response.clone()));
 
-// use `NetworkFirst` strategy for css and js
-workbox.routing.registerRoute(
-  /\.(?:js|css)$/,
-  new workbox.strategies.NetworkFirst()
-);
+        return response;
+      })
+      .catch(function (error) {
+        console.log("Network request Failed. Serving content from cache: " + error);
+        return fromCache(event.request);
+      })
+  );
+});
 
-// use `CacheFirst` strategy for images
-workbox.routing.registerRoute(
-  /assets\/(img|icons)/,
-  new workbox.strategies.CacheFirst()
-);
+function fromCache(request) {
+  // Check to see if you have it in the cache
+  // Return response
+  // If not in the cache, then return error page
+  return caches.open(CACHE).then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      if (!matching || matching.status === 404) {
+        return Promise.reject("no-match");
+      }
 
-// use `StaleWhileRevalidate` third party files
-workbox.routing.registerRoute(
-  /^https?:\/\/cdn.staticfile.org/,
-  new workbox.strategies.StaleWhileRevalidate()
-);
+      return matching;
+    });
+  });
+}
+
+function updateCache(request, response) {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.put(request, response);
+  });
+}
