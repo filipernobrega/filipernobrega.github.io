@@ -1,3 +1,5 @@
+@import "_mixins"
+  
 .highlight
   background: #ffffff 
   .c  
@@ -163,6 +165,8 @@ pre, code
   font-size: 15px
   border-radius: 3px
   background-color: #eef
+  @include tablets-and-down
+    font-size: 11px
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure
   margin-bottom: 15px
@@ -177,3 +181,6 @@ figure
   margin-block-end: 1em
   margin-inline-start: 40px
   margin-inline-end: 40px
+  @include tablets-and-down
+    margin-inline-start: 0
+    margin-inline-end: 0

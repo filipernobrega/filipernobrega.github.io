@@ -5,6 +5,10 @@
 .post
   @include container
   @include display-row
+  @include tablets-and-down
+    width: 100%
+    @include display-col
+    
 
   iframe
     width: 100%
@@ -16,7 +20,9 @@
 
   &__article
     width: 80%
-    padding: 40px 20px 0 0
+    padding: 40px 20px
+    @include tablets-and-down
+      width: 90%
 
   &__share
     @include display-col
@@ -42,6 +48,9 @@
     width: 20%
     padding: 40px 0 0 0
     margin-bottom: 10px
+    @include tablets-and-down
+      width: 90%
+      padding: 40px 20px
     
     & h4 
       margin-bottom: 10px
