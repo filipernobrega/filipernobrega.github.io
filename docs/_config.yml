@@ -38,6 +38,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-pwa-plugin
+  - jekyll-seo-tag
 
 defaults:
 - scope:
