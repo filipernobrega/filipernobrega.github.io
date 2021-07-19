@@ -18,14 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Museu da Computação
+title: Farno Thoughts
 email: fabio.r.nobrega@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Museu da Computação da UFRJ 
+  This is my personal web site and code send box.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FabioRNobrega
 github_username:  FabioRNobrega
+instagram_username: FabioRNobrega
+linkedin_username: fabiornobrega
 
 # Build settings
 port: 3000

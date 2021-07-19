@@ -2,9 +2,9 @@
 @import "../_mixins"
 
 header
-  background: $bg-color
+  background: $bg-transparence
   padding: 20px 10%
-  border-bottom: 1px solid $primary-color
+  border-bottom: 1px solid $border-color-dark
   @include mobile-and-down
     padding: 20px 20px
 
@@ -22,14 +22,14 @@ header
     font-size: 20px
     margin-right: auto
     font-weight: bold
-    color: $text-color
+    color: $text-color-dark
 
   &__item 
     display: inline-block
     padding: 0 20px
 
     a
-      color: $text-color
+      color: $text-color-dark
       
       &:hover 
         color: $primary-color
@@ -44,7 +44,7 @@ header
     margin-top: 40px
 
     & li, a
-      color: $text-color
+      color: $text-color-dark
       font-size: 14px
       font-weight: bold
       margin: 30px 0

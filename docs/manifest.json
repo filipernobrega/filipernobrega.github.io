@@ -3,8 +3,8 @@
 {
   "lang": "pt-BR",
   "dir": "ltr\rtl",
-  "name": "This is my jekyll PWA",
-  "short_name": "myPWA",
+  "name": "Farno Thoughts",
+  "short_name": "Farno Thoughts",
   "icons": [
     {
       "src": "\/assets\/images\/pwa.png",

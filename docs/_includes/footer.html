@@ -4,71 +4,26 @@
   <div class="footer">
     <div class="footer__text">
       <p>
-        {{ site.data.about.about_us.address }}
+        {{ site.title }}
       </p>
       <p>
-        {{ site.data.about.about_us.phone }}
+        {{ site.description}}
       </p>
     </div>
 
-    <div class="footer__list">
-      <ul>
-        <h4> Sobre </h4>
-        <li>
-          <a href="{{ site.url }}/about/#howToGet">
-            Como Chegar
-          </a>
-        </li>
-        <li>
-          <a href="{{ site.url }}/about/#aboutNCE">
-            Sobre o NCE
-          </a>
-        </li>
-        <li>
-          <a href="{{ site.url }}/about/#collaborators">
-            Colaboradores
-          </a>
-        </li>
-        <li>
-          <a href="{{ site.url }}/about/#partners">
-            Parceiros
-          </a>
-        </li>
-  
-      </ul>
-  
-    </div>
-    <div class="footer__list">
-      <ul>
-        <h4> Apoie </h4> 
-        <li>
-          <a href="">
-            Seja Voluntário
-          </a>
-        </li>
-        <li>
-          <a href="">
-            Seja Patrocinador 
-          </a>
-        </li>
-        <li>
-          <a href="">
-            Doação de Itens
-          </a>
-        </li>
-      </ul>
-  
-    </div>
     <div class="footer__social">
-      <a href="">
+      <a href="https://www.twitter.com/{{site.twitter_username}}"  target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="">
-        <i class="fab fa-instagram"></i>
+      <a href="https://www.linkedin.com/in/{{site.linkedin_username}}"  target="_blank">
+        <i class="fab fa-linkedin"></i>
       </a>
-      <a href="">
-        <i class="fab fa-facebook-square"></i>
+      <a href="https://www.github.com/{{site.github_username}}"  target="_blank">
+        <i class="fab fa-github-square"></i>
      </a>
+     <a href="https://www.instagram.com/{{site.instagram_username}}" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
     </div>
   </div>
 </footer>
