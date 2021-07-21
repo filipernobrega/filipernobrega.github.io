@@ -3,9 +3,9 @@
 
 footer
   width: 100%
-  background: $bg-transparence
-  color: $text-color-dark
-  border-top: 1px solid $border-color-dark
+  background-color: var(--bg-transparence)
+  color: var(--text-color)
+  border-top: 1px solid var(--border-color)
   
   
 .footer 
@@ -38,22 +38,22 @@ footer
       margin: 10px 0
 
     & a 
-      color: $text-color-dark
+      color: var(--text-color)
 
       &:hover
-        color: $primary-color
+        color: var(--primary-color)
 
   &__social 
     @include display-row
     justify-content: space-around
 
     & a 
-      color: $text-color-dark
+      color: var(--text-color)
       font-size: 40px
       margin: 0 10px
       @include tablets-and-down
         margin: 0 20px
 
       &:hover
-        color: $primary-color
+        color: var(--primary-color)
       
