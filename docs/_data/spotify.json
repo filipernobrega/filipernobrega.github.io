@@ -1,0 +1,54 @@
+{
+  "playlists": [
+    {
+      "link": "https://open.spotify.com/embed/playlist/2iTyjPAI9SCGxuvzD3lIGr",
+      "title": "wakeUpCoding.py",
+      "description": "PunkRock playlist for wake up and make some code."
+    },
+    { 
+      "link": "https://open.spotify.com/embed/playlist/49s8FHWMwUD5FKo2DhpsYI",
+      "title": "indie_code.ino",
+      "description": "This playlist is about slow indie rock songs for relax, cry and coding." 
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/2e3Kcjkjn2dP8DcYTwzeKk",
+      "title": "rise-of-some-code.spec.js",
+      "description": "Playlist of epic soundtracks for make a better code"
+    },
+    { 
+      "link": "https://open.spotify.com/embed/playlist/0tDN7UGAR4u3AV1DSeaDYn?theme=0",
+      "title": "Lets_code_hot.go",
+      "description": "Playlist with some golden age Broadway musicals for relax and make some code."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/2Ftvu7edC2NWPGvpZFL3zO",
+      "title": "GimmeMoreCode.cc",
+      "description": "Pop Music for coding"
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/3Hs8iAZGediMQ6tQjfhubT",
+      "title": "i_wanna_code.js",
+      "description": "Some 80s and 90s hard rock bands to help you make some code...."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/3n5EomIV4jgL82hSVDKEde",
+      "title": "fly-me-to-de-code-moon.c",
+      "description": "This playlist is about some Jazz and Musical Songs. For do some code or just relax. "
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/37pxT9vTgJ8omKeq5IoMBC",
+      "title": "code_space_opera.spec.rb",
+      "description": "This is a playlist of countermen to relax and fly some code into space."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/3L0gmiuGMoxc026Mafslrh",
+      "title": "BackToTheCode.pas",
+      "description": "Playlist with synthpop from 80's for make some coding."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/2EwOfdcwae7HJjAgo9ilgN",
+      "title": "[AnimeSong]_JROCK_OVA1_ x264_ 1080p_60fps.mkv",
+      "description": "JRock and anime theme Songs. For coding with super powers."
+    }
+  ]
+}
