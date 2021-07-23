@@ -9,7 +9,9 @@
       <li class="menu__item"><a href="/about/#aboutUs">Sobre </a></li>
       <li class="menu__item"><a href="/posts/">Blog</a></li>
       <li class="menu__item"><a href="/contact/" >Contato</a></li>
-      <li class="menu__item"> <label for="switch"> <input type="checkbox" id="switch"> Dark Mode</label> </li>
+      <li id="dark-mode-toggle" class="menu__item dark-mode-icon" aria-label="dark mode"> 
+        <i class="fas fa-adjust"></i>
+      </li>
     </ul>
   </nav>
 
@@ -28,7 +30,9 @@
     <li><a href="/about/#aboutUs">Sobre </a></li>
     <li><a href="/posts/">Blog</a></li>
     <li><a href="/contact/">Contato</a></li>
-    <li> <label for="switch"> <input type="checkbox" id="theme"> Dark Mode</label> </li>
+    <li id="dark-mode-toggle-mobile" class="dark-mode-icon" aria-label="dark mode"> 
+      <i class="fas fa-adjust"></i> 
+    </li>
   </ul>
 </nav>
  
@@ -37,6 +41,10 @@
 
 <script language="JavaScript">
   document.getElementsByClassName('menu-mobile')[0].style.display = 'none'
+  let darkMode = localStorage.getItem('darkMode')
+  const $html = document.querySelector('html')
+  const darkModeToggle = document.querySelector('#dark-mode-toggle')
+  const darkModeToggleMobile = document.querySelector('#dark-mode-toggle-mobile')
 
   function toggle() {    
     var state = document.getElementsByClassName('menu-mobile')[0].style.display;
@@ -47,11 +55,37 @@
     }
   }
 
-  const $html = document.querySelector('html')
-  const $checkbox = document.querySelector('#switch')
+  const enableDarkMode = () => {
+    $html.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', 'enabled');
+  }
 
-  $checkbox.addEventListener('change', function() {
-    $html.classList.toggle('dark-mode')
+  const disableDarkMode = () => {
+    $html.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', 'disabled');
+  }
+
+  if (darkMode === 'enabled') {
+    enableDarkMode();
+  }
+
+  darkModeToggle.addEventListener("click", () => {
+    darkMode = localStorage.getItem('darkMode')
+    if (darkMode !== 'enabled') {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
   })
+
+  darkModeToggleMobile.addEventListener("click", () => {
+    darkMode = localStorage.getItem('darkMode')
+    if (darkMode !== 'enabled') {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  })
+
 </script>
 
