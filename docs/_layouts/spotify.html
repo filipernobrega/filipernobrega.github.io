@@ -1,43 +1,42 @@
 ---
 ---
 
+{% include i18n/i18n %}
+
+
+<!DOCTYPE html>
+<html lang="{{ locale.lang }}" {% if locale.direction == 'rtl' %}dir="rtl"{% endif %}>
+  
 {% include head.html %}
 
-{% include header.html %}
-
-
-
-
-<main class="base-container">
-
-  <h1>
-    Música é uma das minhas paixões.
-  </h1>
-  <h2>
-    Então bora codar e ouvir música juntos?
-  </h2>
-  <h3>
-    Veja seu seu clima de hoje, e da um play &#128521; &#127911;
-  </h3>
-  <div class="spotify-list">
-    {% for playlist in site.data.spotify.playlists %}     
-    <div class="spotify-list__card">
-      <div class="spotify-list__card--playlist">
-        <iframe src="{{ playlist.link }}" width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<body>
+  {% include header.html %}
+  <main class="base-container">
+    <h2>
+      {{ page.description}}
+    </h2>
+    <br>
+    <br>
+    <h3>
+    {{ page.content }}
+    </h3>
+    <div class="spotify-list">
+      {% for playlist in site.data.spotify.playlists %}     
+      <div class="spotify-list__card">
+        <div class="spotify-list__card--playlist">
+          <iframe src="{{ playlist.link }}" width="100%" height="100%" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="spotify-list__card--description">
+          <h4>
+            {{ playlist.title}}
+          </h4>
+          <p>
+            {{ playlist.description }}
+          </p>
+        </div>
       </div>
-      <div class="spotify-list__card--description">
-        <h4>
-          {{ playlist.title}}
-        </h4>
-        <p>
-          {{ playlist.description }}
-        </p>
-      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-</main>
-
-
-
-{% include footer.html %}
+  </main>
+  {% include footer.html %}
+</body>

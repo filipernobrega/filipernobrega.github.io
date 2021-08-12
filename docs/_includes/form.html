@@ -13,14 +13,16 @@
     method="POST"
   >
     <label>
-      Seu Email:
+      {{ page.form.email }}
     </label>
     <input type="email" name="_replyto">
     <label>
-      Sua mensagem:
+      {{ page.form.message }}
     </label>
     <textarea name="message"></textarea>
   
-    <button class="base-button" type="submit">Enviar</button>
+    <button class="base-button" type="submit">
+      {{ page.form.callToAction }}
+    </button>
   </form>
 </section>

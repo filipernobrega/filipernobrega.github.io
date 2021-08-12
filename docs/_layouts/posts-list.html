@@ -1,35 +1,41 @@
 ---
 ---
+
+
+{% include i18n/i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ locale.lang }}" {% if locale.direction == 'rtl' %}dir="rtl"{% endif %}>
+
 {% include head.html %}
 
-{% include header.html %}
+{% assign posts_collection = "posts" | append: page.collection_suffix %}
 
-  <main class="posts-list base-container">
-    <div class="posts-list__tags">
-      <h4> Filtrar por tags</h4>
-      {% for tag in site.tags %}
-      <a class="posts-list__tags--item" href="#{{ tag[0] | slugify }}"><i class="fas fa-tag"></i> {{ tag[0] }}</a>
-      {% endfor %}
-    </div>
-
-    <div >
-      {% for tag in site.tags %}
-        <h2 id="{{ tag[0] | slugify }}"> <i class="fas fa-tag"> </i>  {{ tag | first }}</h2>
-        {% for post in tag[1] %}
-        <section class="posts-list__post">
-          <h1>{{ post.title }} </h1>
-          <p class="posts-list__post--date">{{ post.date | date_to_string }} por {{ post.author}}</p>
-          <p>
-            {{ post.description}}
-          </p>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            Continue lendo...
-          </a>
-        </section>
-        {% endfor %}
+<body>
+  {% include header.html %}
+    <main class="posts-list base-container">
+      <div class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+      </div>
+      
+      <ul class="blog-list">
+        {% for post in site[posts_collection] %}
+        <li>
+          <section class="posts-list__post">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="posts-list__post--date">{% include i18n/date date=post.date format="long" %} por {{ post.author}}</p>
+            <p>
+              {{ post.description}}
+            </p>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              Continue lendo...
+            </a>
+          </section>
+        </li>
         <div class="posts-list__divider"></div>
-      {% endfor %}
-    </div>
-  </main>
-  
-{% include footer.html %}
+        {% endfor %}
+      </ul>
+    </main>
+    
+  {% include footer.html %}
+</body>

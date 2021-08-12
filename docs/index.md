@@ -7,7 +7,7 @@ banner_autor: Alan Mathison Turing
 banner_quote: We can only see a short distance ahead, but we can see plenty there that needs to be done.
 banner_url: banner.jpg
 banner_alt: The first demonstration of the pilot ACE at NPL December 1950
-title: Farno Thoughts
+title: Home
 
 ---
 

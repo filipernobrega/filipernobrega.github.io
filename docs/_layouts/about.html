@@ -1,21 +1,32 @@
 ---
 ---
 
+{% include i18n/i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ locale.lang }}" {% if locale.direction == 'rtl' %}dir="rtl"{% endif %}>
+
 {% include head.html %}
 
-{% include header.html %}
+<body>
+  <main>
+    {% include header.html %}
 
-<main>
-  
-  <div class="base-content">
-    <div id="aboutUs" class="base-container">
-      <h1 class="base-title">
-        {{ site.data.about.about_us.title }}
-      </h1>
-   
-      {{ site.data.about.about_us.content }}
+    <div class="base-content">
+      <div id="aboutUs" class="base-container">
+        <h1 class="base-title">
+          {{ page.title }}
+        </h1>
+     
+        {{ content }}
+      </div>
     </div>
-  </div>
-</main>
+  </main>
+    
+    {% include footer.html %}
 
-{% include footer.html %}
+  </div>
+
+</body>
+
+</html>

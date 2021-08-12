@@ -67,6 +67,76 @@ pwa:
   precache_glob_ignores: # Optional
     - sw-register.js
     - "fonts/**/*"
+
+
+# Locale settings 
+
+locales:
+  default:
+    baseurl: ""
+    name: 🇺🇸
+    lang: en-US
+  pt:
+    baseurl: /pt
+    name: 🇧🇷
+    lang: pt-PT
+
+collections:
+  pages_pt:
+    output: true
+    permalink: /pt/:path/
+  posts:
+    output: true
+    permalink: /blog/:categories/:title/
+  posts_pt:
+    output: true
+    permalink: /pt/blog/:categories/:title/
+
+permalink: pretty
+
+defaults:
+# set page.collection_basename to match collections
+- scope:
+    type: pages
+  values:
+    layout: page
+    collection_basename: pages
+- scope:
+    path: "_pages*/"
+  values:
+    layout: page
+    collection_basename: pages
+- scope:
+    path: "_posts*/"
+  values:
+    layout: post
+    collection_basename: posts
+# set page.locale, page.lang, page.collection_suffix
+- scope:
+    path: "*_pt/"
+  values:
+    locale: pt
+    lang: pt-PT
+    collection_suffix: _pt
+- scope:
+    path: ""
+  values:
+    locale: default
+    lang: en-US
+# prevent index pages from publishing to baseurl/index/index.html
+- scope:
+    path: "_pages_pt/index.*"
+  values:
+    permalink: "/pt/"
+  
+navigation:
+- index
+- blog
+- posts-list
+- spotify
+- about
+- contact
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
