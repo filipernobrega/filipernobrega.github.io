@@ -85,9 +85,6 @@ collections:
   pages_pt:
     output: true
     permalink: /pt/:path/
-  posts:
-    output: true
-    permalink: /blog/:categories/:title/
   posts_pt:
     output: true
     permalink: /pt/blog/:categories/:title/

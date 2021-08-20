@@ -23,7 +23,7 @@
         <li>
           <section class="posts-list__post">
             <h2 class="post-title">{{ post.title }}</h2>
-            <p class="posts-list__post--date">{% include i18n/date date=post.date format="long" %} por {{ post.author}}</p>
+            <p class="posts-list__post--date">{% include i18n/date date=post.date format="short" %} por {{ post.author}}</p>
             <p>
               {{ post.description}}
             </p>
