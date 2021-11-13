@@ -18,13 +18,20 @@
         <h1 class="page-title">{{ page.title }}</h1>
       </div>
 
-      {% for category in site.categories %}
-      <button id="{{ category[0] | slugify }}" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ category[0] }} </button>
-      {% endfor %}
-  
+      <div style="margin-top: 20px;">
+        <h4> {{ page.filter }}: </h4>
+      </div>
+
+      <section style="text-align: center;">
+        <button id="all" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ page.all }} </button>
+        {% for category in site.categories %}
+        <button id="{{ category[0] | slugify }}" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ category[0] }} </button>
+        {% endfor %}
+      </section>
+
       <ul class="blog-list">
         {% for post in site[posts_collection] %}
-        <div id="filter" class="{{ post.category }} display-none">
+        <div id="filter" class="{{ post.category }} display-none all">
           <li>
             <section class="posts-list__post">
               <h2 class="post-title">{{ post.title }}</h2>
@@ -51,20 +58,41 @@
 
 
 <script language="JavaScript">
+  
 function getCategory(category) {
-  let oldCategory = localStorage.getItem('oldCategory')
+  let oldCategory = localStorage.getItem("oldCategory")
 
-  document.querySelectorAll(`.${category}`).forEach((item) => {
-    item.classList.remove("display-none")
-  })
-  document.querySelector(`#${category}`).classList.add("button-active")
+  if(category !== "all") {
+    document.querySelectorAll(`.${category}`).forEach((item) => {
+      item.classList.remove("display-none")
+    })
+    document.querySelector(`#${category}`).classList.add("button-active")
+  }
 
-  console.log(category)
-  console.log(oldCategory)
 
-  if(oldCategory !== category ) {
-    localStorage.setItem('oldCategory', `${category}`)
-    
+  if( category === "all") {
+    document.querySelectorAll('.all').forEach((item) => {
+      item.classList.remove("display-none")
+    })
+    document.querySelector(`#all`).classList.add("button-active")
+    localStorage.setItem("oldCategory", 'all')
+    document.querySelector(`#${oldCategory}`).classList.remove("button-active")
+  }
+
+  if(oldCategory === "all") {
+    document.querySelectorAll('.all').forEach((item) => {
+      item.classList.add("display-none")
+    })
+    document.querySelectorAll(`.${category}`).forEach((item) => {
+      item.classList.remove("display-none")
+    })
+    document.querySelector(`#all`).classList.remove("button-active")
+    localStorage.setItem("oldCategory", `${category}`)
+  }
+
+  if(oldCategory !== category && oldCategory !== "all" && category !== "all" ) {
+    localStorage.setItem("oldCategory", `${category}`)
+
     document.querySelectorAll(`.${oldCategory}`).forEach((item) => {
       item.classList.add("display-none")
     });
