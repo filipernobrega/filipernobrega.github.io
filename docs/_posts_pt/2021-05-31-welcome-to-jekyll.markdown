@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Bem-vindo ao Jekyll!
+comments: false
+read_time: "Leitura de"
 date:   2021-05-31 18:39:36 -0300
 document_id: 2021-05-31-welcome-to-jekyll
 categories: jekyll update
