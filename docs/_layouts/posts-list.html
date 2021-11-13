@@ -17,25 +17,61 @@
       <div class="page-header">
         <h1 class="page-title">{{ page.title }}</h1>
       </div>
-      
+
+      {% for category in site.categories %}
+      <button id="{{ category[0] | slugify }}" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ category[0] }} </button>
+      {% endfor %}
+  
       <ul class="blog-list">
         {% for post in site[posts_collection] %}
-        <li>
-          <section class="posts-list__post">
-            <h2 class="post-title">{{ post.title }}</h2>
-            <p class="posts-list__post--date">{% include i18n/date date=post.date format="short" %} por {{ post.author}}</p>
-            <p>
-              {{ post.description}}
-            </p>
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              Continue lendo...
-            </a>
-          </section>
-        </li>
-        <div class="posts-list__divider"></div>
+        <div id="filter" class="{{ post.category }} display-none">
+          <li>
+            <section class="posts-list__post">
+              <h2 class="post-title">{{ post.title }}</h2>
+              <p class="posts-list__post--date">{% include i18n/date date=post.date format="short" %} por {{ post.author}}</p>
+              <p>
+                {{ post.description}}
+              </p>
+              <p>
+                {{ post.category }}
+              </p>
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                  Continue lendo...
+                </a>
+              </section>
+            </li>
+            <div class="posts-list__divider"></div>
+        </div>
         {% endfor %}
       </ul>
     </main>
     
   {% include footer.html %}
 </body>
+
+
+<script language="JavaScript">
+function getCategory(category) {
+  let oldCategory = localStorage.getItem('oldCategory')
+
+  document.querySelectorAll(`.${category}`).forEach((item) => {
+    item.classList.remove("display-none")
+  })
+  document.querySelector(`#${category}`).classList.add("button-active")
+
+  console.log(category)
+  console.log(oldCategory)
+
+  if(oldCategory !== category ) {
+    localStorage.setItem('oldCategory', `${category}`)
+    
+    document.querySelectorAll(`.${oldCategory}`).forEach((item) => {
+      item.classList.add("display-none")
+    });
+    document.querySelector(`#${oldCategory}`).classList.remove("button-active")
+  }
+
+}
+
+</script>
+

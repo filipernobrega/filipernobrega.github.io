@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Bem-vindo ao Jekyll!
 comments: false
-read_time: "Leitura de"
+read_time: "Read time of"
+title:  "Welcome to Jekyll!"
 date:   2021-05-31 18:39:36 -0300
-document_id: 2021-05-31-welcome-to-jekyll
-category: "jekyll"
+category: "short-history"
 author: Fábio R. Nóbrega
-tags: "welcome"
-description: "Minha Descrição em pt br."
+tags: 'Short-Stories'
+description: "You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated."
 ---
-Você achara esse post no diretório `_posts`. Vá em frente e edite ele como quiser e de um re-build para ver suas mudanças. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
 
@@ -50,6 +49,14 @@ const map = new Map([
 ]);
 {% endhighlight %}
 
+#### Git Diff
+
+{% highlight diff linenos %}
+
++   ruby 
+-   Problems
+
+{% endhighlight %}
 
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].

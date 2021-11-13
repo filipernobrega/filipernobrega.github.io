@@ -87,7 +87,7 @@ collections:
     permalink: /pt/:path/
   posts_pt:
     output: true
-    permalink: /pt/blog/:categories/:title/
+    permalink: /pt/blog/:category/:title/
 
 permalink: pretty
 
