@@ -42,6 +42,14 @@
 
 <script language="JavaScript">
   
+const firstAccess = localStorage.getItem("oldCategory") 
+
+if(firstAccess === null) {
+  getCategory("all")
+} else {
+  getCategory(firstAccess)
+}
+
 function getCategory(category) {
   let oldCategory = localStorage.getItem("oldCategory")
 
