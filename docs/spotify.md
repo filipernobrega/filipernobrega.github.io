@@ -1,9 +1,10 @@
 ---
-layout: spotify
-title: Spotify Playlists
+layout: blank
+title: Spotify
 document_id: spotify
 description: 'Music is one of my passions . So lets listen and code together?'
+iframe-link:  https://volt.fm/fabiornobrega
 ---
 
 
- See your mood and hit the play &#128521; &#127911;
+{% include iframe.html %}
