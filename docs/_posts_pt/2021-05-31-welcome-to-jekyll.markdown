@@ -5,7 +5,7 @@ comments: false
 read_time: "Leitura de"
 date:   2021-05-31 18:39:36 -0300
 document_id: 2021-05-31-welcome-to-jekyll
-category: "jekyll"
+categories: "jekyll"
 author: Fábio R. Nóbrega
 continue: Continue lendo 
 description: "Minha Descrição em pt br."

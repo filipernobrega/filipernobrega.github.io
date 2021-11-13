@@ -24,13 +24,13 @@
 
       <section style="text-align: center; margin-bottom: 50px;">
         <button id="all" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ page.all }} </button>
-        {% for category in site.categories %}
-        <button id="{{ category[0] | slugify }}" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ category[0] }} </button>
+        {% for categories in site.categories %}
+        <button id="{{ categories[0] | slugify }}" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ categories[0] }} </button>
         {% endfor %}
       </section>
 
       {% for post in site[posts_collection] %}
-      <div id="filter" class="{{ post.category }} display-none all">
+      <div id="filter" class="{{ post.categories }} display-none all">
           {% include postcard.html %}
       </div>
       {% endfor %}
@@ -50,18 +50,18 @@ if(firstAccess === null) {
   getCategory(firstAccess)
 }
 
-function getCategory(category) {
+function getCategory(categories) {
   let oldCategory = localStorage.getItem("oldCategory")
 
-  if(category !== "all") {
-    document.querySelectorAll(`.${category}`).forEach((item) => {
+  if(categories !== "all") {
+    document.querySelectorAll(`.${categories}`).forEach((item) => {
       item.classList.remove("display-none")
     })
-    document.querySelector(`#${category}`).classList.add("button-active")
+    document.querySelector(`#${categories}`).classList.add("button-active")
   }
 
 
-  if( category === "all") {
+  if( categories === "all") {
     document.querySelectorAll('.all').forEach((item) => {
       item.classList.remove("display-none")
     })
@@ -74,15 +74,15 @@ function getCategory(category) {
     document.querySelectorAll('.all').forEach((item) => {
       item.classList.add("display-none")
     })
-    document.querySelectorAll(`.${category}`).forEach((item) => {
+    document.querySelectorAll(`.${categories}`).forEach((item) => {
       item.classList.remove("display-none")
     })
     document.querySelector(`#all`).classList.remove("button-active")
-    localStorage.setItem("oldCategory", `${category}`)
+    localStorage.setItem("oldCategory", `${categories}`)
   }
 
-  if(oldCategory !== category && oldCategory !== "all" && category !== "all" ) {
-    localStorage.setItem("oldCategory", `${category}`)
+  if(oldCategory !== categories && oldCategory !== "all" && categories !== "all" ) {
+    localStorage.setItem("oldCategory", `${categories}`)
 
     document.querySelectorAll(`.${oldCategory}`).forEach((item) => {
       item.classList.add("display-none")
