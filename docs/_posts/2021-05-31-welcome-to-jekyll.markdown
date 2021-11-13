@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: false
 title:  "Welcome to Jekyll!"
 date:   2021-05-31 18:39:36 -0300
 categories: jekyll update
