@@ -22,35 +22,18 @@
         <h4> {{ page.filter }}: </h4>
       </div>
 
-      <section style="text-align: center;">
+      <section style="text-align: center; margin-bottom: 50px;">
         <button id="all" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ page.all }} </button>
         {% for category in site.categories %}
         <button id="{{ category[0] | slugify }}" class="posts-list__tags--item" onClick="getCategory(this.id)"> <i class="fas fa-tag"> </i> {{ category[0] }} </button>
         {% endfor %}
       </section>
 
-      <ul class="blog-list">
-        {% for post in site[posts_collection] %}
-        <div id="filter" class="{{ post.category }} display-none all">
-          <li>
-            <section class="posts-list__post">
-              <h2 class="post-title">{{ post.title }}</h2>
-              <p class="posts-list__post--date">{% include i18n/date date=post.date format="short" %} por {{ post.author}}</p>
-              <p>
-                {{ post.description}}
-              </p>
-              <p>
-                {{ post.category }}
-              </p>
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                  Continue lendo...
-                </a>
-              </section>
-            </li>
-            <div class="posts-list__divider"></div>
-        </div>
-        {% endfor %}
-      </ul>
+      {% for post in site[posts_collection] %}
+      <div id="filter" class="{{ post.category }} display-none all">
+          {% include postcard.html %}
+      </div>
+      {% endfor %}
     </main>
     
   {% include footer.html %}
