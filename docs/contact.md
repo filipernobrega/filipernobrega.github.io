@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  Contact
+description: Direct email for fet in touch
 document_id: contact
 form:
   title: "How can i help you?"

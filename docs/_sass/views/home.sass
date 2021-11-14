@@ -2,5 +2,74 @@
 @import "../_mixins"
 
 
+.home 
+  &__presentation
+    @include display-row
+    
+    @include tablets-and-down
+      @include display-col
+      
+    img 
+      max-height: 400px
+      margin: 30px
+    
+  &__title
+    color: var(--primary-color)
+    width: max-content
+    font-family: Garamond
+    margin: 20px 0
+
+  &__help 
+    a 
+      @include base-button
+    p 
+      margin-bottom: 30px
 
     
+      
+    
+  &__posts 
+    width: 300px
+    display: flex
+    @include tablets-and-up
+      @include display-col
+    border: solid 1px var(--primary-color)
+    padding: 10px 20px
+    border-radius: 4px
+
+    a
+      text-decoration: none
+      color: var(--text-color)
+
+      &:hover 
+        color: var(--primary-color)
+  
+  &__featured 
+    a
+      text-decoration: none
+      color: var(--text-color)
+
+      &:hover 
+        color: var(--primary-color)
+
+  &__explore 
+    @include display-row
+    
+    @include tablets-and-down
+      @include display-col
+    
+    &--card 
+      width: 200px
+      margin: 25px 25px 25px 0px
+      @include tablets-and-down
+        width: 100%
+
+      a 
+        text-decoration: none
+        color: var(--text-color)
+
+        &:hover 
+          color: var(--primary-color)
+
+      h4
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif

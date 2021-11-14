@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  Contato
+description: "casa"
 document_id: contact
 form:
   title: "Em que posso ajudar?"

@@ -1,8 +1,8 @@
 ---
 layout: blank
 title: Spotify
+description: All my playlists and like songs with Volt.fm
 document_id: spotify
-description: 'Music is one of my passions . So lets listen and code together?'
 iframe-link:  https://volt.fm/fabiornobrega
 ---
 

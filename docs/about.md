@@ -1,6 +1,7 @@
 ---
 layout: about
-title: About Me
+title: About
+description: A little about my carrie 
 document_id: about
 ---
 
