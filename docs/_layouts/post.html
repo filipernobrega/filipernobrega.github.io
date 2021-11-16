@@ -16,11 +16,11 @@
   
   <main class="post">
     <article class="post__article">
-      <h1 class="base-title">
+      <h1 class="post__article--title">
         {{ page.title }}
       </h1>
-      <p class="base-date">{% include i18n/date date=page.date format="full" %}</p>
-      <p> <i class="fas fa-clock mr"></i>{% include readtime.html content=post.content read_time=page.read_time %}</p>
+      <p class="base-date" style="text-indent: 0;">{% include i18n/date date=page.date format="full" %}</p>
+      <p style="text-indent: 0;"> <i class="fas fa-clock mr"></i>{% include readtime.html content=post.content read_time=page.read_time %}</p>
       
       {{ content }}
   

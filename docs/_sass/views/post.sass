@@ -9,6 +9,31 @@
     width: 100%
     @include display-col
     
+  p 
+    font-size: 18px
+    text-indent: 20px
+  
+
+  a
+    color: var(--primary-color)
+    font-weight: bold
+
+    &:hover
+      color: black
+
+  blockquote
+    font-style: italic
+    background: var(--primary-color)
+    padding: 7px
+    border-radius: 5px
+    margin: 20px 0
+
+    p 
+      padding: 0
+      margin: 0
+      text-indent: 0
+      font-size: 14px
+      text-align: center
 
   iframe
     width: 100%
@@ -23,6 +48,12 @@
     padding: 40px 20px
     @include tablets-and-down
       width: 90%
+
+    &--title 
+      font-weight: bold
+      font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+      font-size: 35px
+      color: var(--primary-color)
 
   &__share
     @include display-col
@@ -63,7 +94,49 @@
       font-size: 14px
       color: var(--text-color)
       padding-bottom: 10px
-      border-bottom: 1px solid var(--primary-color)
+      
+      &::after 
+        border-bottom: 1px solid var(--primary-color)
 
       &:hover
         color: var(--primary-color)
+
+
+.image-left
+  display: block
+  margin-left: auto
+  margin-right: auto
+  float: left
+  overflow: hidden
+  width: 300px
+
+.image-right
+  display: block
+  margin-left: auto
+  margin-right: auto
+  float: right
+  overflow: hidden
+  width: 300px
+  
+table
+  font-family: Arial, Helvetica, sans-serif
+  border-collapse: collapse
+  width: 100%
+
+  td
+    border: 1px solid var(--lighter-background-color)
+    padding: 8px
+  th
+    border: 1px solid var(--lighter-background-color)
+    padding: 8px
+    padding-top: 12px
+    padding-bottom: 12px
+    text-align: left
+    background-color: var(--primary-color)
+    color: white
+  
+  tr:nth-child(even)
+    background-color: var(--lighter-primary-color)
+
+  tr:hover
+    background-color: var(--lighter-primary-color)
