@@ -1,8 +1,8 @@
 ---
 layout: about
-title: Sobre Mim
+title: Sobre
 document_id: about
-description: "casa"
+description: Um pouco sobre minha carreira 
 ---
 
 

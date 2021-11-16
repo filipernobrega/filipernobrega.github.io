@@ -1,20 +1,21 @@
 ---
 layout: home
 title: Início
-description: "casa"
+description: Minha página principal
 about-me: 
-  title: Farno thoughts is the personal web site of Fábio R. Nóbrega
-  body: I am a software developer of web systems with HTML, CSS and JavaScript. I currently use a Vue.JS framework with Nuxt.Js and I have experience with Ruby on Rails and Node.JS (with TypeORM) on backend. I started my journey at the Federal University of Rio de Janeiro studying Engraving ([UFRJ](https://eba.ufrj.br)). I also take classes in Computer Science, where I became part of the junior computer enterprise, [EJCM](https://ejcm.com.br). Where I had experiences with mobile development for android and IOS, as well as the opportunity to manage a project from software prioritization to final execution. I am currently at [lemoneyway](https://lemoneyway.com/en/) where I work as a developer getting deeper and deeper into good programming practices and solving challenges in the cashback market. And I m collaboration on Computer Science museum from UFRJ. To time to time i create some projects for arduino.
+  title: Bem vindo aos meus devaneios
+  body: Sou desenvolvedor front-end de sistemas web com HTML, CSS e JavaScript. Atualmente uso a framework Vue.JS com Nuxt.Js e tenho experiência com back-end em Ruby on Rails e Node.Js ( com TypeORM). Iniciei minha jornada na Universidade Federal do Rio de Janeiro cursando Gravura e comecei a frequentar aulas de Ciência da Computação , onde passei a fazer parte da empresa júnior de computação, EJCM . Onde tive experiências com desenvolvimento mobile para android e IOS, como também tive a oportunidade de gerenciar um projeto de software desda priorização até a execução final . Atualmente estou na lemoney onde trabalho como desenvolvedor me aprofundando cada vez mais em boas práticas de programação e resolvendo desafios do mercado de cashback.
 how-can-i-help-you: 
-  title: ""
-  body: ""
-  call-to-action: ""
+  title: Como posso te ajudar
+  body: Como software developer, eu adoro criar coisas. Minha carreira é em sua maioria voltada para o desenvolvimento web. Mais também trabalhei com arte eletronica e desenho digital em geral. Pondo de forma mais simples, eu posso te ajudar a transforma sua ideia do papel para realidade.
+  call-to-action: 
+    text: Entre em contato
+    link: contact
 recent-posts: 
-  title: ""
-  call-to-action: ""
+  title: Posts recentes
 featured-articles:
-  title: ""
+  title: Principais Posts 
 explore-more: 
-  title: ""
+  title: Explore mais esse site
 
 ---
