@@ -1,9 +1,9 @@
 <article class="postcard">
     <a class="postcard__img_link" href="{{ site.baseurl }}{{ post.url }}">
         {% if post.image == null %}
-        <img class="postcard__img" src="{{ site.baseurl }}/assets/images/pwa.png" alt="Image Title" />
+        <img class="postcard__img invert-img-color" src="{{ site.baseurl }}/assets/images/logo/logo-cut.png" alt="Farno logo" />
         {% else %}
-        <img class="postcard__img" src="{{ site.baseurl }}/assets/images/posts/{{ post.image }}" alt="Image Title" />
+        <img class="postcard__img" src="{{ site.baseurl }}/assets/images/posts/{{ post.image }}" alt="{{ post.title }}" />
         {% endif %}
     </a>
     <div class="postcard__text">

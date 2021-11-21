@@ -7,7 +7,7 @@
   "short_name": "Farno Thoughts",
   "icons": [
     {
-      "src": "\/assets\/images\/pwa.png",
+      "src": "\/assets\/images\/logo\/logo-cut.png",
       "sizes": "192x192",
       "type": "image\/png"
     }
