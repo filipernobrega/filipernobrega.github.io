@@ -15,6 +15,10 @@ recent-posts:
   title: Posts recentes
 featured-articles:
   title: Principais Posts 
+  data: 
+    - title: Lidando com Dados no Jekyll
+      description: Já pensou em como lidar com dados no jekyll? Nesse post vamos discutir alguns formatos de dados e seu fluxo de uso.serve`, which launches a web server and auto-regenerates your site when a file is updated.
+      url: pt/blog/jekyll/data-with-jekyll/
 explore-more: 
   title: Explore mais esse site
 

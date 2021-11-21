@@ -4,6 +4,7 @@
 
 .home 
   &__presentation
+    background-color: var(--lighter-background-color)
     @include display-row
     
     @include tablets-and-down
@@ -11,13 +12,15 @@
       
     img 
       max-height: 400px
+      max-width: 400px
       margin: 30px
+      border-radius: 10px
     
   &__title
     color: var(--primary-color)
-    width: max-content
-    font-family: Garamond
     margin: 20px 0
+    font-family: var(--font-family-title)
+    font-weight: bold
 
   &__help 
     a 
@@ -25,24 +28,23 @@
     p 
       margin-bottom: 30px
 
-    
-      
-    
   &__posts 
-    width: 300px
-    display: flex
-    @include tablets-and-up
-      @include display-col
-    border: solid 1px var(--primary-color)
-    padding: 10px 20px
-    border-radius: 4px
+    background-color: var(--lighter-background-color)
+    &--card
+      max-width: 300px
+      display: flex
+      @include tablets-and-up
+        @include display-col
+      border: solid 1px var(--primary-color)
+      padding: 10px 20px
+      border-radius: 4px
 
-    a
-      text-decoration: none
-      color: var(--text-color)
+      a
+        text-decoration: none
+        color: var(--text-color)
 
-      &:hover 
-        color: var(--primary-color)
+        &:hover 
+          color: var(--primary-color)
   
   &__featured 
     a
@@ -53,6 +55,7 @@
         color: var(--primary-color)
 
   &__explore 
+    background-color: var(--lighter-background-color)
     @include display-row
     
     @include tablets-and-down
@@ -72,4 +75,4 @@
           color: var(--primary-color)
 
       h4
-        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+        font-family: var(--font-family-title)

@@ -4,7 +4,8 @@
 @import "components/banner"
 @import "components/form"
 @import "components/lang-switcher"
-@import "components/postcard"
+@import "components/post-card"
+@import "components/card"
 
 @import "views/home"
 @import "views/about"
@@ -22,10 +23,10 @@
   bax-sizing: border-box
 
 body 
-  font: 400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   font-size: 16px
   color: var(--text-color)
   background-color: var(--background-color)
+  font-family: var(--font-family-base)
 
   a 
     text-decoration: none
@@ -39,6 +40,10 @@ body
     margin-block-end: 1em
     margin-inline-start: 0px
     margin-inline-end: 0px
+    font-family: var(--font-family-base)
+    font-weight: 400
+    line-height: 1.612rem
+    color: var(--text-color)
 
     & a 
       color: var(--primary-color)
@@ -47,17 +52,13 @@ body
 .base-title 
   font-size: 27px
   color: var(--primary-color)
-  font-weight: lighter
+  font-weight: 700
   margin-bottom: 30px
+  font-family: var(--font-family-title)
 
 .base-content
   & p 
     margin: 2% 0
-    font-size: 16px
-    line-height: 17px
-  &__dark
-    background: var(--bg-dark)
-    color: var(--text-color)
   
 .base-container
   @include container

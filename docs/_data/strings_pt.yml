@@ -8,7 +8,7 @@ link: Link
 date_formats:
   full: "%A, %e de %B de %Y"
   long: "%e %B %Y"
-  short: "%d-%m-%Y"
+  short: "%d/%m/%Y"
   months:
     January: Janeiro
     February: Fevereiro

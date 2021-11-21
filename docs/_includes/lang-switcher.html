@@ -8,9 +8,13 @@
       {% else %}
         {% assign localized_page = localized_pages | where: "locale", label | first %}
         {% if localized_page %}
-        <a class="lang-switcher__flag" href="{{ localized_page.url | prepend: site.baseurl }}" hreflang="{{ locale_object.lang }}">{{ locale_object.name }}</a>
+        <a href="{{ localized_page.url | prepend: site.baseurl }}" hreflang="{{ locale_object.lang }}">
+          <span class="lang-switcher__flag"> {{ locale_object.name }} </span>
+        </a>
         {% else %}
-        <a class="lang-switcher__flag" href="{{ locale_object.baseurl | prepend: site.baseurl }}/" hreflang="{{ locale_object.lang }}" class="not-available">{{ locale_object.name }}</a>
+        <a href="{{ locale_object.baseurl | prepend: site.baseurl }}/" hreflang="{{ locale_object.lang }}" class="not-available">
+          <span class="lang-switcher__flag"> {{ locale_object.name }} </span> 
+        </a>
         {% endif %}
       {% endif %}
     </div>

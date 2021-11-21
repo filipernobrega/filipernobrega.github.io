@@ -3,7 +3,7 @@
 
 
 .post
-  @include container
+  background-color: var(--lighter-background-color)
   @include display-row
   @include tablets-and-down
     width: 100%
@@ -19,11 +19,11 @@
     font-weight: bold
 
     &:hover
-      color: black
+      color: var(--text-color)
 
   blockquote
     font-style: italic
-    background: var(--primary-color)
+    background: var(--lighter-background-color)
     padding: 7px
     border-radius: 5px
     margin: 20px 0
@@ -51,7 +51,7 @@
 
     &--title 
       font-weight: bold
-      font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+      font-family: var(--font-family-title)
       font-size: 35px
       color: var(--primary-color)
 
@@ -127,16 +127,13 @@ table
     border: 1px solid var(--lighter-background-color)
     padding: 8px
   th
-    border: 1px solid var(--lighter-background-color)
+    border: 2px solid var(--lighter-background-color)
     padding: 8px
     padding-top: 12px
     padding-bottom: 12px
     text-align: left
-    background-color: var(--primary-color)
-    color: white
+    background-color: var(--lighter-background-color)
+    color: var(--text-color)
   
   tr:nth-child(even)
-    background-color: var(--lighter-primary-color)
-
-  tr:hover
-    background-color: var(--lighter-primary-color)
+    background-color: var(--lighter-background-color)

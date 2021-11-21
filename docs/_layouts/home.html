@@ -15,92 +15,94 @@
   
   <main>
     <div class="home">
-      <div class="base-container">
-        <section class="home__presentation"> 
-          <div>
-            <h1 class="home__title"> {{ page.about-me.title }} </h1>
-            {{ page.about-me.body }}
+      <section class="home__presentation"> 
+        <div class="base-container">
+          <div class="home__presentation">
+            <div>
+              <h1 class="home__title"> {{ page.about-me.title }} </h1>
+              <p> {{ page.about-me.body }} </p>
+            </div>
+            <img src="{{site.url}}/assets/images/avatar/avatar.jpg" alt="">
           </div>
-          <img src="{{site.url}}/assets/images/desenho.png" alt="">
-        </section>
+        </div>
+      </section>
 
-        <section class="home__help">
+      <section class="home__help">
+        <div class="base-container">
           <h2 class="home__title">
             {{ page.how-can-i-help-you.title }}
           </h2>
           <p>
             {{ page.how-can-i-help-you.body}}
           </p>
-          <div>
+          <div style="margin-bottom: 40px;">
             <a href="{{ site.url }}/{{ page.how-can-i-help-you.call-to-action.link }}">
               {{ page.how-can-i-help-you.call-to-action.text }}
             </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="home_posts"> 
+      <section class="home__posts"> 
+        <div class="base-container">
           <h2 class="home__title">
             {{ page.recent-posts.title }}
           </h2>
-          {% for post in site[posts_collection] %}
-           <div class="home__posts">
-             <a href="{{site.url}}/{{post.url}}">
-               <h4>
-                 {{ post.title}}
-               </h4>
-               <p>{% include i18n/date date=post.date format="full" %}</p>
-               <p> <i class="fas fa-clock mr"></i>{% include readtime.html content=post.content read_time=page.read_time %}</p>
-               <p>
-                 {{ post.description }}
-               </p>
-             </a>
-           </div>
+          {% for post in site[posts_collection]  limit:3%}
+            <div class="card-link">
+              {% include card.html type=post %}
+            </div>
           {% endfor %}
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div class="base-container">
           <h2 class="home__title">
             {{ page.featured-articles.title }}
           </h2>
           {% for post in page.featured-articles.data %}
           <div class="home__featured">
             <a href="{{site.url}}/{{post.url}}">
-            <h4>
-              {{ post.title}}
-            </h4>    
-             <p>
+              <h4 style="margin-bottom: 10px;">
+                {{ post.title}}
+              </h4>    
+              <span>
                 {{ post.description }}
-              </p>
+              </span>
             </a>
           </div>
           {% endfor %}
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h2 class="home__title">
-            {{ page.explore-more.title }}
-          </h2>
-          <div class="home__explore">
-          {% assign current_url = page.url %}
-          {% assign pages_collection = "pages" | append: page.collection_suffix %}
-          {% assign pages = site[pages_collection] %}
-          {% for document_id in site.navigation %}
-            {% for page in pages %}
-              {% include i18n/document_id obj=page %}
-              {% if obj_document_id == document_id %}
-                <div class="home__explore--card">
-                  <a href="{{ page.url | prepend: site.baseurl }}" {% if page.url == current_url %}aria-current="page"{% endif %}>
-                    <h4> {{ page.title | escape }} </h4>
-                    <hr style="margin-bottom: 10px;">
-                    <div>
-                      {{ page.description | escape }}
-                    </div>
-                  </a>
-                </div>
-                {% break %}
-              {% endif %}
+        <section class="home__explore">
+          <div class="base-container">
+            <h2 class="home__title">
+              {{ page.explore-more.title }}
+            </h2>
+            <div class="home__explore">
+            {% assign current_url = page.url %}
+            {% assign pages_collection = "pages" | append: page.collection_suffix %}
+            {% assign pages = site[pages_collection] %}
+            {% for document_id in site.navigation %}
+              {% for page in pages %}
+                {% include i18n/document_id obj=page %}
+                {% if obj_document_id == document_id %}
+                  <div class="home__explore--card">
+                    <a href="{{ page.url | prepend: site.baseurl }}" {% if page.url == current_url %}aria-current="page"{% endif %}>
+                      <h4> {{ page.title | escape }} </h4>
+                      <hr style="margin-bottom: 10px;">
+                      <div>
+                        {{ page.description | escape }}
+                      </div>
+                    </a>
+                  </div>
+                  {% break %}
+                {% endif %}
+                {% endfor %}
               {% endfor %}
-            {% endfor %}
+            </div>
           </div>
         </section>
       </div>
