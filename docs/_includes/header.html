@@ -31,9 +31,9 @@
   </nav>
 
 <div class="menu-mobile__icon">
-  <div class="menu__logo">
-    {{ site.title }}
-  </div>
+  <a class="menu-mobile__logo" href="{{site.url}}/#">
+    <img class="invert-img-color" src="{{ site.baseusrl }}/assets/images/logo/logo-cut.png" alt="{{ site.title }}">
+  </a>
   <a href="#" onclick="toggle();">
     <i class="fas fa-bars"></i>
   </a>

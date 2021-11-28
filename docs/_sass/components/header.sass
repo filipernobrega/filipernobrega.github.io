@@ -39,7 +39,7 @@ header
 
 .menu-mobile 
   display: none
-  height: 400px
+  height: max-content
   @include display-col
   text-align: center
 
@@ -54,6 +54,11 @@ header
 
       &.dark-mode-icon 
         font-size: 30px
+
+  &__logo 
+    img 
+      width: 40px
+      height: 40px
 
   &__icon 
     font-size: 30px
