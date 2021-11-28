@@ -1,0 +1,40 @@
+ 
+ <div class="time-line">
+   {% for company in page.time_line%}
+    <hr>
+    <div class="time-line__company row">
+      <img src="{{ company.img_path }}" alt="company.name">
+      <div>
+        <h4> {{ company.name }} </h4>
+        <p> {{ company.time }}</p>
+      </div>
+    </div>
+    {% for role in company.roles %}
+      <div class="row">
+        <div class="column" style="margin-left: 20px;">
+          <div class="time-line__icon" ></div>
+          {% unless role.first %}
+          <div class="time-line__line"></div>
+          {% endunless %}
+        </div>
+        <div class="column" style="margin-left: 20px;">
+          <div class="time-line__title">
+            <h4 class="time-line__title--role"> {{ role.name }} </h4>
+            <p class="time-line__title--type"> {{ role.type }} </p>
+          </div>
+          <div class="time-line__subtitle">
+            {{ role.description }}.
+            <ol>
+              <strong>  {{ role.technologies_used_title}}: </strong>  
+              {% for technology in role.technologies_used%}
+                <li>
+                  {{ technology.name }}
+                </li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+   {% endfor %}
+ </div>

@@ -1,0 +1,70 @@
+@import "../_variables"
+@import "../_mixins"
+
+
+.time-line
+  line-height: 1.5rem
+
+  hr 
+    margin: 50px 0
+
+  &__company 
+    img
+      width: 56px
+      height: 56px
+      margin-right: 10px
+      margin-bottom: 10px
+
+    h4
+      font-family: var(--font-family-title)
+
+  &__icon
+    &::before 
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      content: ''
+      display: inline-block
+      position: relative
+      top: 1px
+      margin-top: 5px
+      border: solid 4px var(--primary-color)
+  
+  &__line
+    &::before
+    content: "  "
+    position: relative
+    height: calc(100% - 22px)
+    min-height: calc(60px - 22px)
+    left: 7px
+    width: 4px
+    background-color: var(--primary-color)
+
+  &__title
+    &--role
+      margin-bottom: 0
+      color: var(--primary-color)
+      font-family: var(--font-family-title)
+
+    &--type
+      margin-top: 5px !important
+      margin-bottom: 10px !important
+      color: var(--primary-color)
+      text-transform: uppercase
+
+  &__subtitle
+    ol
+      margin-top: 10px
+      list-style-position: inside
+      li 
+        margin: 10px 0
+  
+
+        
+
+.row
+  @include display-row
+
+.column 
+  @include display-col
+  
