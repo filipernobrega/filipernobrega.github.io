@@ -5,29 +5,29 @@
 
 <a href="{{ post.url }}">
     <div class="card">
-        {% if post.image == null %}
+        {% if prop.image == null %}
         <span></span>
         {% else %}
-        <img class="card-img-top" src="{{ site.baseurl }}/assets/images/posts/{{ post.image }}"
+        <img class="card__img--top" src="{{ site.baseurl }}/assets/images/posts/{{ prop.image }}"
             alt="{{ site.baseurl }}/assets/images/{{prop.title}}" />
         {% endif %}
-        <div class="card-hide-expand"></div>
-        <div class="card-body d-flex flex-column">
+        <div class="card__hide---expand"></div>
+        <div class="card__body">
             <div>
-                <h3 class="card-title">
+                <h3 class="card__title">
                     {{ prop.title }}
                 </h3>
             </div>
             <div>
-                <p class="card-text">
+                <p class="card__text">
                     {{ prop.description }}
                 </p>
             </div>
             <div>
-                <time datetime="2020-05-25" class="card-date-published">
-                    <i class="fas fa-calendar-alt mr"></i> {% include i18n/date date=post.date format="short" %}
+                <time class="card__date--published">
+                    <i class="fas fa-calendar-alt"></i> {% include i18n/date date=post.date format="short" %}
                 </time>
-                <a class="card-read-more" href="{{ post.url }}">
+                <a class="card__read--more" href="{{ post.url }}">
                     <h5> {{ post.continue }} </h5>
                 </a>
             </div>
