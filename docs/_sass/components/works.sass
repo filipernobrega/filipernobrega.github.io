@@ -1,0 +1,16 @@
+@import "../_mixins"
+@import "../_variables"
+
+.works 
+  &__title 
+    margin: 20px 0 
+    font-size: 25px
+    color: var(--primary-color)
+
+  &__descriptons 
+    margin: 10px 0
+
+  &__projects 
+    @include display-row
+    flex-wrap: wrap
+    

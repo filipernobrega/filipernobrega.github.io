@@ -9,7 +9,7 @@ author: Fábio R. Nóbrega
 continue: Continue lendo
 comments: false
 read_time: Tempo de leitura
-image: "2021-09-07-data-with-jekyll.jpeg"
+image: 2021-09-07-data-with-jekyll.jpeg
 ---
 
 _Esse post foi originalmente publicado no [museu da computação da ufrj](https://museucomputacao.github.io/)_.

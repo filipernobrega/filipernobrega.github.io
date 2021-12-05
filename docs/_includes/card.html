@@ -8,7 +8,7 @@
         {% if prop.image == null %}
         <span></span>
         {% else %}
-        <img class="card__img--top" src="{{ site.baseurl }}/assets/images/posts/{{ prop.image }}"
+        <img class="card__img--top" src="{{ site.baseurl }}/assets/images/{{ prop.image }}"
             alt="{{ site.baseurl }}/assets/images/{{prop.title}}" />
         {% endif %}
         <div class="card__hide---expand"></div>
@@ -25,10 +25,12 @@
             </div>
             <div>
                 <time class="card__date--published">
-                    <i class="fas fa-calendar-alt"></i> {% include i18n/date date=post.date format="short" %}
+                    {% if prop.date %}
+                      <i class="fas fa-calendar-alt"></i> {% include i18n/date date=prop.date format="short" %}
+                    {% endif %}
                 </time>
-                <a class="card__read--more" href="{{ post.url }}">
-                    <h5> {{ post.continue }} </h5>
+                <a class="card__read--more" href="{{ prop.url }}">
+                    <h5> {{ prop.continue }} </h5>
                 </a>
             </div>
         </div>
