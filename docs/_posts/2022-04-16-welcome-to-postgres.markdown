@@ -8,7 +8,7 @@ categories: postgres
 author: Fábio R. Nóbrega
 continue: Read more
 description: A few intruduction on postgres and psql setup for get thinks done. 
-image: 
+image: postgress.png
 ---
 # Postgres
 
@@ -180,4 +180,4 @@ Change access for other users
 GRANT ALL ON DATABASE  <db-name> TO <user-name>; 
 ```
 
-So that all folks, any questions just [get in touch](https://{{ site.baseusrl }}/contact/)
+So that all folks, any questions just [get in touch](https://fabiornobrega.github.io/contact/)
