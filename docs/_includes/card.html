@@ -5,11 +5,12 @@
 
 <a href="{{ post.url }}">
     <div class="card">
-        {% if prop.image == null %}
-        <span></span>
+        {% if post.image %}
+          <img class="card-img-top" src="{{ site.baseurl }}/assets/images/posts/{{ post.image }}" alt="{{prop.title}}" />
+        {% elsif post.image_url %}
+          <img class="card-img-top" src="{{ post.image_url }}" alt="{{prop.title}}" />
         {% else %}
-        <img class="card__img--top" src="{{ site.baseurl }}/assets/images/{{ prop.image }}"
-            alt="{{ site.baseurl }}/assets/images/{{prop.title}}" />
+          <img class="postcard__img invert-img-color" src="{{ site.baseurl }}/assets/images/logo/logo-cut.png" alt="Farno logo" />
         {% endif %}
         <div class="card__hide---expand"></div>
         <div class="card__body">
