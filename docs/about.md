@@ -6,7 +6,7 @@ document_id: about
 time_line: 
   - company: 
     name: LemoneyWay
-    img_path: https://media-exp1.licdn.com/dms/image/C4D0BAQFJFIiBlky39g/company-logo_100_100/0/1609266722699?e=1646265600&v=beta&t=Ooo8OTYaCLDrGOLOuTlOWOBLzgCV2CinAeFXfKWsaLM 
+    img_path: lemoneyway.jpeg
     time: July 2019 to now 
     roles:
       - name: Software Developer 
@@ -48,7 +48,7 @@ time_line:
         - name: GEM and NPM
   - company: 
     name: EJCM
-    img_path: https://media-exp1.licdn.com/dms/image/C4D0BAQG-_6jm18CGrw/company-logo_100_100/0/1615225230900?e=1646265600&v=beta&t=Gn0V1W6VS9gYs9aPBGEkMuutwxK3cKyf5kg_-maCRB8
+    img_path: ejcm.jpeg
     time: March 2019 to December 2020
     roles:
       - name: Software project Management 
@@ -80,7 +80,7 @@ time_line:
         - name: PHP
   - company: 
     name: NANO (Núcleo de Arte e Novos Organismos)
-    img_path: https://media-exp1.licdn.com/dms/image/C4D0BAQEJrIfeC7xhNg/company-logo_100_100/0/1537618412005?e=1646265600&v=beta&t=cwCbBsWN1yjgZO-aTFBeYhr0w17hmoXjIHBndWZeW80
+    img_path: nano.jpeg
     time: April 2019 to October 2019
     roles:
       - name: Scientific Researcher
