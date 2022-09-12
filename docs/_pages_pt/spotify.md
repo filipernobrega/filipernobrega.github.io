@@ -1,10 +1,7 @@
 ---
-layout: blank
+layout: spotify
 title: Spotify
 document_id: spotify
-description:  Minhas playlists do spotify com Volt.fm
-iframe-link:  https://volt.fm/fabiornobrega
+description: Meu Top 5 playlists do spotify
+subtitle: Compare nosso gosto musical com 
 ---
-
-
-{% include iframe.html %}

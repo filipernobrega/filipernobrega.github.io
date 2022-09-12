@@ -1,0 +1,29 @@
+{
+  "playlists": [
+    {
+      "link": "https://open.spotify.com/embed/playlist/2iTyjPAI9SCGxuvzD3lIGr?utm_source=generator",
+      "title": "wakeUpCoding.py",
+      "description": "PunkRock playlist for wake up and make some code."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/49s8FHWMwUD5FKo2DhpsYI?utm_source=generator",
+      "title": "indie_code.ino",
+      "description": "This playlist is about slow indie rock songs for relax, cry and coding."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/2e3Kcjkjn2dP8DcYTwzeKk?utm_source=generator",
+      "title": "rise-of-some-code.spec.js",
+      "description": "Playlist of epic soundtracks for make a better code"
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/3n5EomIV4jgL82hSVDKEde?utm_source=generator",
+      "title": "fly-me-to-the-code-moon.c",
+      "description": "This playlist is about some Jazz and Musical Songs. For do some code or just relax."
+    },
+    {
+      "link": "https://open.spotify.com/embed/playlist/2e2lDasBK5aNyFNfbH8rts?utm_source=generator",
+      "title": "this_is_brazilian_code.ex",
+      "description": "Some rock songs from 80's and 90's  from Brazil MPB"
+    }
+  ]
+}

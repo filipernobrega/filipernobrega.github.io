@@ -13,13 +13,11 @@
   {% include header.html %}
   <main class="base-container">
     <h2>
-      {{ page.description}}
+      {{ page.description }}
     </h2>
-    <br>
-    <br>
-    <h3>
-    {{ page.content }}
-    </h3>
+    <p>
+      {{ page.subtitle }} <a href="https://volt.fm/fabiornobrega"> Volt.fm </a>.
+    </p>
     <div class="spotify-list">
       {% for playlist in site.data.spotify.playlists %}     
       <div class="spotify-list__card">

@@ -12,6 +12,11 @@ works:
         continue: See More 
         url: https://lemoneyway.com/opencashback/en/
         image: works/opencashback.jpeg
+      - title: Phoenix LiveView Web Message 
+        description: A simple example of web chat with elixir and phoenix. 
+        continue: See More 
+        url: https://github.com/FabioRNobrega/elixir-phoenix-liveview-messenger-example
+        image: works/phoenix.png
   - type: 
     title: Digital/Electronic Art
     collection: 
