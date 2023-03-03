@@ -9,6 +9,18 @@
     {
       "src": "\/assets\/images\/logo\/logo-pwa.png",
       "sizes": "192x192",
+      "type": "image\/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "\/assets\/images\/logo\/logo-pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image\/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "\/assets\/images\/logo\/logo-pwa-180x180.png",
+      "sizes": "180x190",
       "type": "image\/png"
     }
   ],

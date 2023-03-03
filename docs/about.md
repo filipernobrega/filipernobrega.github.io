@@ -3,11 +3,25 @@ layout: about
 title: About
 description: A little about my carrie 
 document_id: about
-time_line: 
+time_line:
+  - company: 
+    name: StoneCO
+    img_path: stone.jpeg
+    time: October 2022 to now
+    roles:
+      - name: Backend Developer
+        first: true
+        type: Fulltime
+        description: In this new opportunity, I'm able to work really deep on finances and improve my skills in functional programming with Elixir.
+        technologies_used_title: Technologies Used
+        technologies_used:
+        -  name: Elixir
+        -  name: Grafana
+        -  name: Prometheus
   - company: 
     name: LemoneyWay
     img_path: lemoneyway.jpeg
-    time: July 2019 to now 
+    time: July 2019 to november 2022
     roles:
       - name: Software Developer 
         first: false
@@ -96,6 +110,6 @@ time_line:
 ---
 
 
- I am a software developer of web systems with HTML, CSS and JavaScript. I currently use a Vue.JS framework with Nuxt.Js and I have experience with Ruby on Rails and Node.JS (with TypeORM) on backend. I started my journey at the Federal University of Rio de Janeiro studying Engraving ([UFRJ](https://eba.ufrj.br)). I also take classes in Computer Science, where I became part of the junior computer enterprise, [EJCM](https://ejcm.com.br). Where I had experiences with mobile development for android and IOS, as well as the opportunity to manage a project from software prioritization to final execution. I am currently at [lemoneyway](https://lemoneyway.com/en/) where I work as a developer getting deeper and deeper into good programming practices and solving challenges in the cashback market. And I m collaboration on Computer Science museum from UFRJ. To time to time i create some projects for arduino.
+ I am a software developer of web systems with HTML, CSS and JavaScript. I currently use a Vue.JS framework with Nuxt.Js and I have experience with Ruby on Rails and Node.JS (with TypeORM) on backend. I started my journey at the Federal University of Rio de Janeiro studying Engraving ([UFRJ](https://eba.ufrj.br)). I also take classes in Computer Science, where I became part of the junior computer enterprise, [EJCM](https://ejcm.com.br). Where I had experiences with mobile development for android and IOS, as well as the opportunity to manage a project from software prioritization to final execution. At [lemoneyway](https://lemoneyway.com/en/) I work as a developer getting deeper and deeper into good programming practices and solving challenges in the cashback market. And I m collaboration on Computer Science museum from UFRJ. To time to time i create some projects for arduino. I'm currently working as a backend with Elixir at Stone fintech for payments and bank accounts.
 
  Take a look at my full job timeline below

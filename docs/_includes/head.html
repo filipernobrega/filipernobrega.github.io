@@ -9,6 +9,13 @@
 
   <title>{{ site.title | escape }}{% if page.title %} — {{ page.title | escape }}{% endif %}</title>
 
+  <!-- iOS meta tags and icons --> 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Farno Thoughts">
+  <link rel="apple-touch-icon" href="{{ site.baseusrl }}/assets/images/logo/logo-pwa-180x180.png">
+
+  <meta name="theme-color" content="#090A0C">
   <script src="https://kit.fontawesome.com/5d13920381.js" crossorigin="anonymous"></script>
   {% for localized_page in localized_pages %}
   {% unless localized_page.locale == page.locale %}
