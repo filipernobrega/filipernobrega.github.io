@@ -1,6 +1,10 @@
 @import "../_variables"
 @import "../_mixins"
 
+.spotify-page-title
+  font-family: var(--font-family-title)
+  color: var(--primary-color)
+
 .spotify-list
   @include display-col
   margin: 50px 0
@@ -16,6 +20,7 @@
     border: 2px solid var(--border-color)
     border-radius: 12px
     background-color: var(--bg-transparence)
+    box-shadow: var(--box-shadow)
 
     @include tablets-and-down
       @include display-col

@@ -12,17 +12,19 @@
   <main>
     {% include header.html %}
 
-    <div class="base-content">
-      <div id="aboutUs" class="base-container">
-        <h1 class="base-title">
-          {{ page.title }}
-        </h1>
-     
-        {{ content }}
-        
-        <section>
-          {% include time-line.html %}
-        </section>
+    <div class="base-container">
+      <div class="base-background">
+        <div id="aboutUs" class="base-container">
+          <h1 class="base-title">
+            {{ page.title }}
+          </h1>
+       
+          {{ content }}
+          
+          <section>
+            {% include time-line.html %}
+          </section>
+        </div>
       </div>
     </div>
   </main>
