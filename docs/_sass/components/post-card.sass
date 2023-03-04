@@ -10,7 +10,7 @@
   overflow: hidden
   position: relative
   color: var(--text-color)
-  background-color: var(--lighter-background-color)
+  background-color: var(--bg-transparence)
 
   &:hover
     .postcard__bar
@@ -43,7 +43,7 @@
     height: 10px
     margin: 10px 0
     border-radius: 5px
-    background-color: var(--primary-color)
+    background-color: var(--bg-transparence)
     transition: width 0.2s ease
         
   &__text
@@ -70,7 +70,8 @@
 
       .tag__item
           display: inline-block
-          background: rgba(83, 83, 83, 0.4)
+          background-color: var(--bg-transparence)
+          border: 1px solid var(--border-color)
           border-radius: 3px
           padding: 2.5px 10px
           margin: 0 5px 5px 0
@@ -79,7 +80,7 @@
           transition: background-color 0.3s
 
           &:hover
-              background: rgba(83, 83, 83, 0.8)
+            backdrop-filter: blur(15px)
 
       .play
           i
@@ -88,7 +89,7 @@
               color: var(--text-color)
           &:hover
               color: var(--button-text-color)
-              background-color: var(--primary-color)
+              background-color: var(--bg-transparence)
 
 @media screen and (min-width: 769px)
     .postcard
