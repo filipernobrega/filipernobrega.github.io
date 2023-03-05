@@ -48,6 +48,9 @@ footer
   &__social
     @include display-row
     justify-content: space-around
+    @include small-mobile-and-down
+      flex-wrap: wrap
+      align-items: center
 
     & a
       color: var(--text-color)
