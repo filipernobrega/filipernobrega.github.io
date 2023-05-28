@@ -1,25 +1,25 @@
 ---
 layout: home
 title: Home
-description: My welcome page
+description: My welcome portifolio 
 read_time: read
 about-me: 
-  title: Welcome to my thoughts
-  body:  I am a software developer of web systems with HTML, CSS and JavaScript. I currently use a Vue.JS framework with Nuxt.Js and I have experience with Ruby on Rails and Node.JS (with TypeORM) on backend. I started my journey at the Federal University of Rio de Janeiro studying Engraving UFRJ. I also take classes in Computer Science, where I became part of the junior computer enterprise, EJCM. Where I had experiences with mobile development for android and IOS, as well as the opportunity to manage a project from software prioritization to final execution. At lemoneyway I work as a developer getting deeper and deeper into good programming practices and solving challenges in the cashback market. And I m collaboration on Computer Science museum from UFRJ. To time to time i create some projects for arduino. I'm currently working as a backend with Elixir at Stone fintech for payments and bank accounts.
+  title: Welcome to my personal portfolio. 
+  body:  While studying Industrial Design at ESDI - UERJ, they interned at a service design firm - Aegis Strategy - where they had their first contact with new business ventures. Passionate about management and strategy, they started a second undergraduate degree in Business Administration at UNICARIOCA. Later on, they pursued an MBA in Project Management at NPG UERJ. In 2021, they joined the New Products team at FIESC and currently lead the development and launch of new executive education and postgraduate programs for FIESC Business Academy.
 how-can-i-help-you: 
   title: How can I help you?
-  body: As a software developer, I love to create new stuff. My career is mostly in web development. I all so do a lot of electronic art with Arduino and digital art in general.Put simply I can help you transform ideas on paper into reality. 
+  body: Please, be confortable to get in touch. 
   call-to-action: 
     text: Get in touch with me
     link: contact
 recent-posts: 
   title: Recent posts
-featured-articles:
-  title: Feature Articles
-  data: 
-    - title: Welcome to Jekill
-      description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-      url: jekyll/2021/05/31/welcome-to-jekyll/
+# featured-articles:
+#   title: Feature Articles
+#   data: 
+#     - title: Welcome to Jekill
+#       description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+#       url: jekyll/2021/05/31/welcome-to-jekyll/
 explore-more: 
   title: "Explore more on this site"
 
