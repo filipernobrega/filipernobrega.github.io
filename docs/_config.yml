@@ -18,17 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Farno Thoughts
-email: fabio.r.nobrega@gmail.com
+title: Filipe Portfólio
+email: filipernobrega@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal web site and code send box.
+  Conheça umm pouco mais sobre os projetos que desenvolvi. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: FabioRNobrega
-github_username:  FabioRNobrega
-instagram_username: FabioRNobrega
-linkedin_username: fabiornobrega
-stackoverflow_username: fabiornobrega
+# twitter_username: 
+# github_username:  
+instagram_username: 366wines
+linkedin_username: frnobrega
+# stackoverflow_username:
 
 # Build settings
 port: 3000
@@ -131,9 +131,10 @@ navigation:
 - works
 - blog
 - posts-list
-- spotify
+# - spotify
 - about
 - contact
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

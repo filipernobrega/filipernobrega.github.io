@@ -1,8 +1,8 @@
 {
   "about_us": {
     "title": "Sobre Mim",
-    "content":  "I am a software developer of web systems with HTML, CSS and JavaScript. I currently use a Vue.JS framework with Nuxt.Js and I have experience with Ruby on Rails and Node.JS (with TypeORM) on backend. I started my journey at the Federal University of Rio de Janeiro studying Engraving. I also take classes in Computer Science, where I became part of the junior computer enterprise, EJCM. Where I had experiences with mobile development for android and IOS, as well as the opportunity to manage a project from software prioritization to final execution. I am currently at lemoney where I work as a developer getting deeper and deeper into good programming practices and solving challenges in the cashback market. And I m collaboration on Computer Science museum from UFRJ. To time to time i create some projects for arduino.",
-    "address": "Rio de Janeiro",
+    "content":  "Enquanto cursava Desenho Industrial na ESDI - UERJ, estagiou em um escritório de design de serviços - Aegis Strategy - onde teve seu primeiro contato com novos negócios. Apaixonando por gestão e estratégia, iniciou uma segunda graduação em Administração de Empresas na UNICARIOCA. Mais tarde iniciou um MBA em Gestão de Projetos pelo NPG UERJ. Em 2021 entrou no time de Novos Produtos da FIESC, e atualmente lidera a construção e lançamento de novos produtos de educação executiva e pós graduação para a Academia FIESC de Negócios.",
+    "address": "Florianópolis - SC",
     "phone": ""
   }
 }
